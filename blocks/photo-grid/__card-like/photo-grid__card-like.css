@@ -1,0 +1,10 @@
+.photo-grid__card-like {
+  margin: 0px;
+  padding-right: 20px;
+  width: 22px;
+  height: 19px;
+}
+.photo-grid__card-like:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}

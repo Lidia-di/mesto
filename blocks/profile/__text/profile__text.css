@@ -1,0 +1,23 @@
+.profile__text {
+  margin: 0px;
+  width: calc(294px + 18px + 24px);
+  display: grid;
+  grid-template-columns: minmax(294px, calc(880px - (169px + 24px + 10px + 150px))) 24px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  "title edit"
+  "subtitle .";
+  grid-area: text;
+}
+
+@media screen and (max-width: 665px) {
+  .profile__text {
+	width: 189px;
+    padding-top: 22.25px;
+    grid-template-columns: calc(320px - (19px*2 + 18px + 10px)) 18px;
+    grid-template-rows: 33px calc(17px + 36px);
+    grid-template-areas:
+    "title edit"
+    "subtitle .";
+  }
+}

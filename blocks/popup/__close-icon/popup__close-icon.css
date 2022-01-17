@@ -1,0 +1,18 @@
+.popup__close-icon {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: calc(50% - (330px/2) - 32px - 8px); /* 32рх высота элемента, 8px - отступ из макета*/
+  left: calc(50% + (430px/2) + 8px); /* 8px - отступ из макета*/
+}
+.popup__close-icon:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 665px) {
+  .popup__close-icon {
+     width: 20px;
+     height: 20px;
+  }
+}

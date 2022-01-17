@@ -1,0 +1,12 @@
+.photo-grid__card-like_active {
+  margin: 0px;
+  padding-right: 20px;
+  width: 22px;
+  height: 19px;
+  background-image: url(../../../../images/active-like.svg);
+  background-repeat: no-repeat;
+}
+.photo-grid__card-like_active:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}

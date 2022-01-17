@@ -1,0 +1,20 @@
+.profile__subtitle {
+  margin: 0px;
+  padding-right: 18px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  grid-area: subtitle;
+  align-self: start;
+}
+@media screen and (max-width: 665px) {
+  .profile__subtitle {
+    font-size: 14px;
+    line-height: 17px;
+	text-align: center;
+	padding-right: 10px;
+	padding-bottom: 36px;
+  }
+}
