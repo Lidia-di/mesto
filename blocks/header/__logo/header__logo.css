@@ -1,3 +1,12 @@
 .header__logo {
   margin: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 665px) {
+  .header__logo {
+    padding-left: 27px;
+    width: 103.74px;
+  }
 }

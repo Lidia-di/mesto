@@ -4,6 +4,9 @@
   width: 150px;
   height: 50px;
   background-color: black;
+  background-image: url("../../../images/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   border: 2px solid white;
   grid-area: add-button;
   align-self: center;
@@ -22,8 +25,9 @@
 
 @media screen and (max-width: 665px) {
   .profile__add-button {
-	margin: 0 auto;
+    margin: 0 auto;
     width: 282px;
     align-self: self-start;
+    background-size: 16px;
   }
 }

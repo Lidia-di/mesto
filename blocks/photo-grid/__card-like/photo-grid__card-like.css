@@ -1,10 +1,20 @@
 .photo-grid__card-like {
   margin: 0px;
-  padding-right: 20px;
+  padding-right: 11%;
   width: 22px;
   height: 19px;
+  background-image: url(../../../images/like.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
 }
-.photo-grid__card-like:hover {
-  cursor: pointer;
-  opacity: 0.6;
+.photo-grid__card-like_disabled:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 800px) {
+  .photo-grid__card-like {
+    padding-right: 40px;
+  }
 }

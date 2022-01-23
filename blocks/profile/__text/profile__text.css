@@ -5,19 +5,20 @@
   grid-template-columns: minmax(294px, calc(880px - (169px + 24px + 10px + 150px))) 24px;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
-  "title edit"
-  "subtitle .";
+    "title edit"
+    "subtitle .";
   grid-area: text;
+  align-self: end;
 }
 
 @media screen and (max-width: 665px) {
   .profile__text {
-	width: 189px;
-    padding-top: 22.25px;
-    grid-template-columns: calc(320px - (19px*2 + 18px + 10px)) 18px;
+    width: calc(320px - (18px + 19px + 38px));
+    padding-top: 26px;
+    grid-template-columns: calc(320px - (18px + 19px + 38px)) calc(18px + 38px);
     grid-template-rows: 33px calc(17px + 36px);
     grid-template-areas:
-    "title edit"
-    "subtitle .";
+      "title edit"
+      "subtitle subtitle";
   }
 }

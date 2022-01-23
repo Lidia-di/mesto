@@ -4,7 +4,7 @@
   height: 39px;
   padding-bottom: 16px;
   padding-right: 18px;
-  font-family: Inter;
+  font-family: "Inter", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 42px;
@@ -14,10 +14,10 @@
 }
 @media screen and (max-width: 665px) {
   .profile__title {
-	width: calc(320px - (19px*2 + 18px + 10px));
+    width: calc(320px - (18px + 19px + 38px));
     font-size: 27px;
     line-height: 33px;
-	text-align: center;
+    text-align: end;
     padding-right: 10px;
     padding-bottom: 14px;
     box-sizing: border-box;

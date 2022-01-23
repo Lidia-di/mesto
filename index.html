@@ -11,35 +11,28 @@
   <body class="page">
     <header class="header">
       <div class="header__logo-place">
-        <img class="header__logo" src="./images/logo-mesto.png" alt="логотип">
+        <img class="header__logo" src="./images/logo.svg" alt="логотип">
       </div>
-      <div class="header__line"></div>
     </header>
     <section class="profile">
-      <div class="profile__avatar-container">
         <img class="profile__avatar" src="./images/avatar.jpg" alt="аватар">
-      </div>
-      <!--profile__avatar-container-->
       <div class="profile__text">
-        <h2 class="profile__title">Жак-Ив Кусто</h2>
+        <h1 class="profile__title">Жак-Ив Кусто</h1>
         <p class="profile__subtitle">Исследователь океана</p>
-        <button class="profile__edit-button">
-				<img class="profile__edit-img" src="./images/edit.svg" alt="редактирова">
-			</button>
+        <button class="profile__edit-button" type="button">
+		  	</button>
       </div>
-      <button class="profile__add-button">
-			<img class="profile__add-img" src="./images/plus.svg" alt="добавить">
-		</button>
+      <button class="profile__add-button" type="button">
+	  	</button>
     </section>
     <section class="photo-grid">
-      <nav class="photo-grid__area">
         <ul class="photo-grid__list">
           <li class="photo-grid__card">
             <img class="photo-grid__card-image" src="./images/abraudurso.jpg" alt="Абрау-Дюрсо">
             <div class="photo-grid__card-bottom">
               <h2 class="photo-grid__card-title">Абрау-Дюрсо</h2>
-              <div class="photo-grid__card-like photo-grid__card-like_disabled">
-              </div>
+              <button class="photo-grid__card-like" type="button">
+              </button>
             </div>
           </li>
           <!--photo-grid__card-->
@@ -47,8 +40,8 @@
             <img class="photo-grid__card-image" src="./images/baikal.jpg" alt="Байкал">
             <div class="photo-grid__card-bottom">
               <h2 class="photo-grid__card-title">Байкал</h2>
-              <div class="photo-grid__card-like photo-grid__card-like_disabled">
-              </div>
+              <button class="photo-grid__card-like" type="button">
+              </button>
             </div>
           </li>
           <!--photo-grid__card-->
@@ -56,8 +49,8 @@
             <img class="photo-grid__card-image" src="./images/karelia.jpg" alt="Карелия">
             <div class="photo-grid__card-bottom">
               <h2 class="photo-grid__card-title">Карелия</h2>
-              <div class="photo-grid__card-like photo-grid__card-like_disabled">
-              </div>
+              <button class="photo-grid__card-like" type="button">
+              </button>
             </div>
           </li>
           <!--photo-grid__card-->
@@ -65,8 +58,8 @@
             <img class="photo-grid__card-image" src="./images/altayskiegoy.jpg" alt="Алтайские горы">
             <div class="photo-grid__card-bottom">
               <h2 class="photo-grid__card-title">Алтайские горы</h2>
-              <div class="photo-grid__card-like photo-grid__card-like_disabled">
-              </div>
+              <button class="photo-grid__card-like" type="button">
+              </button>
             </div>
           </li>
           <!--photo-grid__card-->
@@ -74,8 +67,8 @@
             <img class="photo-grid__card-image" src="./images/elbrus.jpg" alt="Эльбрус">
             <div class="photo-grid__card-bottom">
               <h2 class="photo-grid__card-title">Эльбрус</h2>
-              <div class="photo-grid__card-like photo-grid__card-like_disabled">
-              </div>
+              <button class="photo-grid__card-like" type="button">
+              </button>
             </div>
           </li>
           <!--photo-grid__card-->
@@ -83,32 +76,27 @@
             <img class="photo-grid__card-image" src="./images/krasnayapolyana.jpg" alt="Красная Поляна">
             <div class="photo-grid__card-bottom">
               <h2 class="photo-grid__card-title">Красная Поляна</h2>
-              <div class="photo-grid__card-like photo-grid__card-like_disabled">
-              </div>
+              <button class="photo-grid__card-like" type="button">
+              </button>
             </div>
           </li>
           <!--photo-grid__card-->
         </ul>
-      </nav>
     </section>
 
     <footer class="footer">
       <p class="footer__copyright">&copy; 2022 Назарова Лидия</p>
     </footer>
     <section class="popup">
-      <img class="popup__close-icon" src="./images/cross.svg" alt="закрыть">
+      <button class="popup__close-icon" type="button">
+      </button>
       <div class="popup__container">
         <h3 class="popup__title">Редактировать профиль</h3>
-        <div class="popup__field">
-          <input type="text" placeholder="Жак-Ив Кусто" class="popup__type">
-          <div class="popup__field-line"></div>
-        </div>
-        <div class="popup__field">
-          <input type="text" placeholder="Исследователь океана" class="popup__type">
-          <div class="popup__field-line"></div>
-        </div>
-        <button class="popup__save-button">Сохранить</button>
-      </div>
+        <form class="popup__field" name="field">
+          <input type="text" name="fullname" placeholder="Ваше имя" class="popup__type popup__type_fullname">
+          <input type="text" name="profession" placeholder="Ваша профессия" class="popup__type popup__type_profession">
+        <button class="popup__save-button" type="submit">Сохранить</button>
+        </form>
     </section>
     <script src="./script/script.js"></script>
   </body>

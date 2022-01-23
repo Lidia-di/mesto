@@ -1,4 +1,7 @@
 .popup__close-icon {
+  background-image: url("../../../images/cross.svg");
+  background-color: transparent;
+  border: none;
   width: 32px;
   height: 32px;
   position: absolute;
@@ -14,5 +17,8 @@
   .popup__close-icon {
      width: 20px;
      height: 20px;
+     background-size: cover;
+     top: calc(50% - (322px/2) - 20px - 16px);
+     left: calc(50% + (282px/2) - 22px );
   }
 }
