@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   border: none;
 }
-.photo-grid__card-like_disabled:hover {
+.photo-grid__card-like:hover {
     cursor: pointer;
     opacity: 0.6;
 }
