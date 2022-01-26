@@ -8,6 +8,9 @@
   line-height: 22px;
   grid-area: subtitle;
   align-self: start;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 @media screen and (max-width: 665px) {
   .profile__subtitle {

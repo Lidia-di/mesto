@@ -1,6 +1,7 @@
 .popup__type {
   margin: 0px;
   padding-top: 30px;
+  padding-bottom: 13px;
   box-sizing: border-box;
   width: 358px;
   font-family: "Inter", "Arial", sans-serif;
@@ -9,7 +10,7 @@
   font-size: 14px;
   line-height: 17px;
   border: none;
-  border-bottom: 1px solid rgba(199, 121, 121, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .popup__type::placeholder {
