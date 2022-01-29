@@ -20,7 +20,7 @@ edit_button.addEventListener('click', open_popup);
 function formSubmitHandler (evt) {
     evt.preventDefault();
     profileName.textContent = nameInput.value;
-    profileProfessiontextContent = jobInput.value;
+    profileProfession.textContent = jobInput.value;
     close_popup();
 }
 formElement.addEventListener('submit', formSubmitHandler);
