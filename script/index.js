@@ -8,19 +8,19 @@ let nameInput = document.querySelector('.popup__type_input_name');
 let jobInput = document.querySelector('.popup__type_input_profession');
 
 let profileName = document.querySelector('.profile__title');
-let profession = document.querySelector('.profile__subtitle');
+let profileProfession = document.querySelector('.profile__subtitle');
 
 function open_popup() {
     popup_window.classList.add('popup_opened');
     nameInput.value = profileName.textContent;
-    jobInput.value = profession.textContent;
+    jobInput.value = profileProfession.textContent;
 }
 edit_button.addEventListener('click', open_popup);
 // Занесение текста в форму и закрытие попапа с изменением контента__________
 function formSubmitHandler (evt) {
     evt.preventDefault();
     profileName.textContent = nameInput.value;
-    profession.textContent = jobInput.value;
+    profileProfessiontextContent = jobInput.value;
     close_popup();
 }
 formElement.addEventListener('submit', formSubmitHandler);
