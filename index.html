@@ -23,62 +23,9 @@
       <button class="profile__add-button" type="button">
 	  	</button>
     </section>
+
     <section class="photo-grid">
         <ul class="photo-grid__list">
-          <li class="photo-grid__card">
-            <img class="photo-grid__card-image" src="./images/abraudurso.jpg" alt="Абрау-Дюрсо">
-            <div class="photo-grid__card-bottom">
-              <h2 class="photo-grid__card-title">Абрау-Дюрсо</h2>
-              <button class="photo-grid__card-like" type="button">
-              </button>
-            </div>
-          </li>
-          <!--photo-grid__card-->
-          <li class="photo-grid__card">
-            <img class="photo-grid__card-image" src="./images/baikal.jpg" alt="Байкал">
-            <div class="photo-grid__card-bottom">
-              <h2 class="photo-grid__card-title">Байкал</h2>
-              <button class="photo-grid__card-like" type="button">
-              </button>
-            </div>
-          </li>
-          <!--photo-grid__card-->
-          <li class="photo-grid__card">
-            <img class="photo-grid__card-image" src="./images/karelia.jpg" alt="Карелия">
-            <div class="photo-grid__card-bottom">
-              <h2 class="photo-grid__card-title">Карелия</h2>
-              <button class="photo-grid__card-like" type="button">
-              </button>
-            </div>
-          </li>
-          <!--photo-grid__card-->
-          <li class="photo-grid__card">
-            <img class="photo-grid__card-image" src="./images/altayskiegoy.jpg" alt="Алтайские горы">
-            <div class="photo-grid__card-bottom">
-              <h2 class="photo-grid__card-title">Алтайские горы</h2>
-              <button class="photo-grid__card-like" type="button">
-              </button>
-            </div>
-          </li>
-          <!--photo-grid__card-->
-          <li class="photo-grid__card">
-            <img class="photo-grid__card-image" src="./images/elbrus.jpg" alt="Эльбрус">
-            <div class="photo-grid__card-bottom">
-              <h2 class="photo-grid__card-title">Эльбрус</h2>
-              <button class="photo-grid__card-like" type="button">
-              </button>
-            </div>
-          </li>
-          <!--photo-grid__card-->
-          <li class="photo-grid__card">
-            <img class="photo-grid__card-image" src="./images/krasnayapolyana.jpg" alt="Красная Поляна">
-            <div class="photo-grid__card-bottom">
-              <h2 class="photo-grid__card-title">Красная Поляна</h2>
-              <button class="photo-grid__card-like" type="button">
-              </button>
-            </div>
-          </li>
-          <!--photo-grid__card-->
         </ul>
     </section>
 
@@ -87,8 +34,7 @@
     </footer>
 
     <section class="popup">
-      <button class="popup__close-icon" type="button">
-      </button>
+      <button class="popup__close-icon" type="button"></button>
       <div class="popup__container">
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__field" name="field">
@@ -96,9 +42,42 @@
           <input type="text" name="profession" placeholder="Ваша профессия" class="popup__type popup__type_input_profession">
         <button class="popup__save-button" type="submit">Сохранить</button>
         </form>
+      </div>
+    </section>
+
+    <section class="popup-add">
+      <button class="popup-add__close-icon" type="button"></button>
+      <div class="popup-add__container">
+        <h3 class="popup-add__title">Новое место</h3>
+        <form class="popup-add__field" name="field">
+          <input type="text" name="place" placeholder="Название" class="popup-add__type popup-add__type_input_name">
+          <input type="url" name="link" placeholder="Ссылка на картинку" class="popup-add__type popup-add__type_input_url">
+        <button class="popup-add__save-button" type="submit">Сохранить</button>
+        </form>
       </div>  
     </section>
+
+    <section class="fullscreen-img">
+      <figure class="fullscreen-img__container">
+        <button class="fullscreen-img__close-icon" type="button"></button>
+        <img class="fullscreen-img__image" src="" alt="картинка">
+        <figcaption class="fullscreen-img__caption"></figcaption>
+      </figure>
+    </section>
+
+    <template class="card__template">
+      <li class="photo-grid__card">
+        <img class="photo-grid__card-image" src="" alt="картинка">
+        <div class="photo-grid__card-bottom">
+          <h2 class="photo-grid__card-title"></h2>
+          <button class="photo-grid__card-like" type="button"></button>
+          <button class="photo-grid__delete" type="button"></button>
+        </div>
+      </li>
+    </template>
+
     <script src="./script/index.js"></script>
   </body>
+  <!-- https://unsplash.com/photos/XtuzelRdoxo    ссылка на картинку для теста добавления-->
 
 </html>

@@ -1,0 +1,20 @@
+.fullscreen-img__container { 
+  margin: auto auto;
+  max-width: 75vw;
+  max-height: 75vh;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  top: 12.5vh;
+}
+
+@media screen and (max-width: 665px) {
+    .fullscreen-img__container {
+    width: 282px;
+    height: 322px;
+	  top: calc(50% - (322px/2));
+    align-items: center;
+  }
+}

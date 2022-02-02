@@ -1,0 +1,26 @@
+.popup-add__type {
+  margin: 0px;
+  padding-top: 30px;
+  padding-bottom: 13px;
+  box-sizing: border-box;
+  width: 358px;
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.popup-add__type::placeholder {
+  color:black;
+}
+
+@media screen and (max-width: 665px) {
+  .popup-add__type {
+    margin: 0px calc(282px - 238px);
+    width: 238px;
+
+  }
+}

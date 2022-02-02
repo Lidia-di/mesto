@@ -12,3 +12,9 @@
   line-height: 29px;
   color: #000000;
 }
+
+@media screen and (max-width: 800px) {
+  .photo-grid__card-title {
+    width: 90%;
+  }
+}

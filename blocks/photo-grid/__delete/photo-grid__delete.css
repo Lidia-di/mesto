@@ -1,0 +1,13 @@
+.photo-grid__delete {
+  border: 0;
+  padding: 0px;
+  width: 23px;
+  height: 19px;
+  background-image: url(../../../images/bin.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+  bottom: 294px;
+  right: 20px;
+}
