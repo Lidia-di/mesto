@@ -24,7 +24,7 @@ const cardDescr = document.querySelector('.photo-grid__card-title');
 const popupFullscreen = document.querySelector('.popup_type_fullscreen');
 const imageFullscreen = document.querySelector('.popup__image');
 const captionPopup = document.querySelector('.popup__caption');
-const imageClose = document.querySelector('.popup__button_type_fullscreen');
+const imageClose = document.querySelector('.popup__close-icon_type_fullscreen');
 
 const popup = document.querySelector('.popup');
 
