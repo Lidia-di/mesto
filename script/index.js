@@ -28,28 +28,28 @@ const imageClose = document.querySelector('.popup__close-icon_type_fullscreen');
 
 const popup = document.querySelector('.popup');
 
-function openPopup() {
+function openPopup(popup) {
  popup.classList.add('popup_opened');
 }
-function closePopup() {
+function closePopup(popup) {
  popup.classList.remove('popup_opened');
 }
 
-function input (nameInput, jobInput) { // не работает
-  openPopup;
+function input() { // + работает
+  openPopup(popupWindow);
   nameInput.value = profileName.textContent;
   jobInput.value = profileProfession.textContent;
 }
 
-buttonEdit.addEventListener('click', input)
-popupEditClose.addEventListener('click', closePopup);
+buttonEdit.addEventListener('click', input); // + открывает текст заносит
+popupEditClose.addEventListener('click', closePopup(popupWindow)); // - не закрывает
 formElement.addEventListener('submit', formSubmitHandler);
 
-buttonAdd.addEventListener('click', openPopup); // открывает поп-ап с редактированием :,))
-popupAddClose.addEventListener('click', closePopup);
+buttonAdd.addEventListener('click', openPopup(popupAddWindow)); // - не открывает
+popupAddClose.addEventListener('click', closePopup(popupAddWindow));
 formAddElement.addEventListener('submit', formAddHandler);
 
-imageClose.addEventListener('click', closePopup); // не работает
+imageClose.addEventListener('click', closePopup(popupFullscreen)); // - не закрывает
 
 
 // Ввод пользователем текста в форму и закрытие попапа с изменением контента__________
@@ -57,7 +57,7 @@ function formSubmitHandler (evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profileProfession.textContent = jobInput.value;
-  popupEditClose.addEventListener('click', closePopup);  // не работает кнопка сохранить
+  closePopup();  // - меняет текст но не закрывает попап
 }
 
 //  добавление карточек при загрузке и добавление новой карточки через форму попап_______________________
