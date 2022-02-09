@@ -1,20 +1,20 @@
-.fullscreen-img__close-icon {
-  background-image: url("../../../images/cross.svg");
+.popup__close-icon_type_fullscreen {
+  background-image: url("../../../../images/cross.svg");
   background-color: transparent;
   border: none;
   width: 32px;
   height: 32px;
   position: absolute;
-  right: 3vw;
+  right: -3vw;
   top: -7vh;
 }
-.fullscreen-img__close-icon:hover {
+.popup__close-icon_type_fullscreen:hover {
   cursor: pointer;
   opacity: 0.6;
 }
 
 @media screen and (max-width: 665px) {
-  .fullscreen-img__close-icon {
+  .popup__close-icon_type_fullscreen {
      width: 20px;
      height: 20px;
      background-size: cover;

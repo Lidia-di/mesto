@@ -33,35 +33,35 @@
       <p class="footer__copyright">&copy; 2022 Назарова Лидия</p>
     </footer>
 
-    <section class="popup">
-      <button class="popup__close-icon" type="button"></button>
-      <div class="popup__container">
-        <h3 class="popup__title">Редактировать профиль</h3>
-        <form class="popup__field" name="field">
-          <input type="text" name="fullname" placeholder="Ваше имя" class="popup__type popup__type_input_name">
-          <input type="text" name="profession" placeholder="Ваша профессия" class="popup__type popup__type_input_profession">
+    <section class="popup popup_type_profile-edit">
+      <button class="popup__close-icon popup__close-icon_type_profile-edit" type="button"></button>
+      <div class="popup__container popup__container_type_profile-edit">
+        <h3 class="popup__title popup__title_type_profile-edit">Редактировать профиль</h3>
+        <form class="popup__field popup__field_type_profile-edit" name="field">
+          <input type="text" name="fullname" placeholder="Ваше имя" class="popup__input popup__input_type_name">
+          <input type="text" name="profession" placeholder="Ваша профессия" class="popup__input popup__input_type_profession">
         <button class="popup__save-button" type="submit">Сохранить</button>
         </form>
       </div>
     </section>
 
-    <section class="popup-add">
-      <button class="popup-add__close-icon" type="button"></button>
-      <div class="popup-add__container">
-        <h3 class="popup-add__title">Новое место</h3>
-        <form class="popup-add__field" name="field">
-          <input type="text" name="place" placeholder="Название" class="popup-add__type popup-add__type_input_name">
-          <input type="url" name="link" placeholder="Ссылка на картинку" class="popup-add__type popup-add__type_input_url">
-        <button class="popup-add__save-button" type="submit">Сохранить</button>
+    <section class="popup popup_type_add">
+      <button class="popup__close-icon popup__close-icon_type_add" type="button"></button>
+      <div class="popup__container popup__container_type_add">
+        <h3 class="popup__title popup__title_type_add">Новое место</h3>
+        <form class="popup__field popup__field_type_add" name="field">
+          <input type="text" name="place" placeholder="Название" class="popup__input popup__input_type_place">
+          <input type="url" name="link" placeholder="Ссылка на картинку" class="popup__input popup__input_type_url">
+        <button class="popup__save-button popup__save-button_type_add" type="submit">Сохранить</button>
         </form>
       </div>  
     </section>
 
-    <section class="fullscreen-img">
-      <figure class="fullscreen-img__container">
-        <button class="fullscreen-img__close-icon" type="button"></button>
-        <img class="fullscreen-img__image" src=" " alt="картинка">
-        <figcaption class="fullscreen-img__caption"></figcaption>
+    <section class="popup popup_type_fullscreen">
+      <figure class="popup__container_type_fullscreen">
+        <button class="popup__close-icon_type_fullscreen" type="button"></button>
+        <img class="popup__image" src=" " alt="картинка">
+        <figcaption class="popup__caption"></figcaption>
       </figure>
     </section>
 
@@ -75,9 +75,9 @@
         </div>
       </li>
     </template>
-
+    <script src="./script/cards.js"></script>
     <script src="./script/index.js"></script>
   </body>
-  <!-- https://unsplash.com/photos/XtuzelRdoxo    ссылка на картинку для теста добавления-->
+ 
 
 </html>
