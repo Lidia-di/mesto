@@ -31,33 +31,22 @@ const popup = document.querySelector('.popup');
 function openPopup(popup) {
  popup.classList.add('popup_opened');
 }
+
 function closePopup(popup) {
  popup.classList.remove('popup_opened');
 }
 
-function input() { // + работает
+function input() {
   openPopup(popupWindow);
   nameInput.value = profileName.textContent;
   jobInput.value = profileProfession.textContent;
 }
 
-buttonEdit.addEventListener('click', input); // + открывает текст заносит
-popupEditClose.addEventListener('click', closePopup(popupWindow)); // - не закрывает
-formElement.addEventListener('submit', formSubmitHandler);
-
-buttonAdd.addEventListener('click', openPopup(popupAddWindow)); // - не открывает
-popupAddClose.addEventListener('click', closePopup(popupAddWindow));
-formAddElement.addEventListener('submit', formAddHandler);
-
-imageClose.addEventListener('click', closePopup(popupFullscreen)); // - не закрывает
-
-
-// Ввод пользователем текста в форму и закрытие попапа с изменением контента__________
 function formSubmitHandler (evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profileProfession.textContent = jobInput.value;
-  closePopup();  // - меняет текст но не закрывает попап
+  closePopup(popupWindow);
 }
 
 //  добавление карточек при загрузке и добавление новой карточки через форму попап_______________________
@@ -90,7 +79,7 @@ cardsInitial.forEach(renderCard);
    const cardTitle = placeInput.value;
    cardsInitial.push({name: cardTitle, link: cardImage})
    renderCard(cardsInitial[cardsInitial.length - 1])
-   closePopup;
+   closePopup(popupAddWindow);
 }
 
 function fullscreenImage(element) {
@@ -99,9 +88,19 @@ function fullscreenImage(element) {
   imageFullscreen.setAttribute('src',element.path[1].querySelector('.photo-grid__card-image').src);
 }
 
-
-
-
+buttonEdit.addEventListener('click', input);
+formElement.addEventListener('submit', formSubmitHandler);
+popupAddClose.addEventListener('click', closePopup(popupAddWindow));
+formAddElement.addEventListener('submit', formAddHandler);
+popupEditClose.addEventListener('click', function(){
+  closePopup(popupWindow)
+  });
+buttonAdd.addEventListener('click', function(){
+  openPopup(popupAddWindow)
+  });
+imageClose.addEventListener('click', function(){
+  closePopup(popupFullscreen)
+  });
 
 // https://images.unsplash.com/photo-1643475246169-dd57253b646a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2960&q=80
 // ссылка тестик
