@@ -24,7 +24,7 @@ const cardDescr = document.querySelector('.photo-grid__card-title');
 const popupFullscreen = document.querySelector('.popup_type_fullscreen');
 const imageFullscreen = document.querySelector('.popup__image');
 const captionPopup = document.querySelector('.popup__caption');
-const imageClose = document.querySelector('.popup__close-icon_type_fullscreen');
+const imageClose = document.querySelector('.popup__button_type_fullscreen');
 
 const popup = document.querySelector('.popup');
 
@@ -90,10 +90,12 @@ function fullscreenImage(element) {
 
 buttonEdit.addEventListener('click', input);
 formElement.addEventListener('submit', formSubmitHandler);
-popupAddClose.addEventListener('click', closePopup(popupAddWindow));
 formAddElement.addEventListener('submit', formAddHandler);
 popupEditClose.addEventListener('click', function(){
   closePopup(popupWindow)
+  });
+popupAddClose.addEventListener('click', function(){
+  closePopup(popupAddWindow)
   });
 buttonAdd.addEventListener('click', function(){
   openPopup(popupAddWindow)

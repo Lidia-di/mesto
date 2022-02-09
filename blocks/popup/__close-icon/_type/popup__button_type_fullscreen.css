@@ -1,4 +1,4 @@
-.popup__close-icon_type_fullscreen {
+.popup__button_type_fullscreen {
   background-image: url("../../../../images/cross.svg");
   background-color: transparent;
   border: none;
@@ -8,13 +8,13 @@
   right: -3vw;
   top: -7vh;
 }
-.popup__close-icon_type_fullscreen:hover {
+.popup__button_type_fullscreen:hover {
   cursor: pointer;
   opacity: 0.6;
 }
 
 @media screen and (max-width: 665px) {
-  .popup__close-icon_type_fullscreen {
+  .popup__button_type_fullscreen {
      width: 20px;
      height: 20px;
      background-size: cover;
