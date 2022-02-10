@@ -62,9 +62,7 @@ function createCard(element) {//ф создания готовой карточ�
     event.target.classList.toggle("photo-grid__card-like_active")});//лайк
   cardElement.querySelector('.photo-grid__delete').addEventListener('click', (event) => {
     event.target.closest('.photo-grid__card').remove()});//корзина
-  cardElement.querySelector('.photo-grid__card').addEventListener('click', function () {
-    fullscreenImage(element)
-});
+    cardElement.querySelector('.photo-grid__card-image').addEventListener('click', fullscreenImage)
   return cardElement;
 }
 
@@ -87,12 +85,12 @@ cardsInitial.forEach(renderCard);
    closePopup(popupAddWindow);
 }
 
-function fullscreenImage(element) {
+function fullscreenImage(evt) {
   openPopup(popupFullscreen);
-  captionPopup.innerText = element.name;
-  imageFullscreen.src = element.link;
-  imageFullscreen.alt = element.name;
-}
+  captionPopup.innerText = evt.path[1].querySelector('.photo-grid__card-title').innerText; //эту
+  imageFullscreen.src = evt.target.src;
+  imageFullscreen.alt = evt.target.alt;
+  }
 
 buttonEdit.addEventListener('click', input);
 formElement.addEventListener('submit', formSubmitHandler);
