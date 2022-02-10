@@ -54,6 +54,7 @@ function formSubmitHandler (evt) {
 function createCard(element) {//ф создания готовой карточки
   const cardElement = cardTemplate.cloneNode(true);
   cardElement.querySelector('.photo-grid__card-image').src = element.link;
+  cardElement.querySelector('.photo-grid__card-image').alt = element.name;
   cardElement.querySelector('.photo-grid__card-title').textContent = element.name;
   
   cardElement.querySelector('.photo-grid__card-like').addEventListener('click', (event) => {
@@ -77,15 +78,17 @@ cardsInitial.forEach(renderCard);
    evt.preventDefault();
    const cardImage = imgInput.value;
    const cardTitle = placeInput.value;
-   cardsInitial.push({name: cardTitle, link: cardImage})
-   renderCard(cardsInitial[cardsInitial.length - 1])
+   const link = imgInput.value;
+   const name = placeInput.value;
+   renderCard({name, link})
    closePopup(popupAddWindow);
 }
 
-function fullscreenImage(element) {
-  popupFullscreen.classList.add('popup_opened');
-  captionPopup.innerText = element.path[1].querySelector('.photo-grid__card-title').innerText;
-  imageFullscreen.setAttribute('src',element.path[1].querySelector('.photo-grid__card-image').src);
+function fullscreenImage(evt) {
+  openPopup(popupFullscreen);
+  captionPopup.innerText = evt.path[1].querySelector('.photo-grid__card-title').innerText;
+  imageFullscreen.src = evt.target.src;
+  imageFullscreen.alt = evt.target.alt;
 }
 
 buttonEdit.addEventListener('click', input);
