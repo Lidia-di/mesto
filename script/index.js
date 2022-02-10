@@ -20,6 +20,7 @@ const cardTemplate = document.querySelector('.card__template').content;
 const cardList = document.querySelector('.photo-grid__list');
 const cardImg = document.querySelector('.photo-grid__card-image');
 const cardDescr = document.querySelector('.photo-grid__card-title');
+const card = document.querySelector('.photo-grid__card');
 
 const popupFullscreen = document.querySelector('.popup_type_fullscreen');
 const imageFullscreen = document.querySelector('.popup__image');
@@ -61,7 +62,9 @@ function createCard(element) {//ф создания готовой карточ�
     event.target.classList.toggle("photo-grid__card-like_active")});//лайк
   cardElement.querySelector('.photo-grid__delete').addEventListener('click', (event) => {
     event.target.closest('.photo-grid__card').remove()});//корзина
-  cardElement.querySelector('.photo-grid__card-image').addEventListener('click', fullscreenImage)
+  cardElement.querySelector('.photo-grid__card').addEventListener('click', function () {
+    fullscreenImage(element)
+});
   return cardElement;
 }
 
@@ -84,11 +87,11 @@ cardsInitial.forEach(renderCard);
    closePopup(popupAddWindow);
 }
 
-function fullscreenImage(evt) {
+function fullscreenImage(element) {
   openPopup(popupFullscreen);
-  captionPopup.innerText = evt.path[1].querySelector('.photo-grid__card-title').innerText;
-  imageFullscreen.src = evt.target.src;
-  imageFullscreen.alt = evt.target.alt;
+  captionPopup.innerText = element.name;
+  imageFullscreen.src = element.link;
+  imageFullscreen.alt = element.name;
 }
 
 buttonEdit.addEventListener('click', input);
