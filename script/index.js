@@ -29,84 +29,76 @@ const imageClose = document.querySelector('.popup__close-icon_type_fullscreen');
 
 const popup = document.querySelector('.popup');
 
+//--------------------------------------POPUP OPEN-------------------------------------------------
 function openPopup(popup) {
  popup.classList.add('popup_opened');
 }
-
+//--------------------------------------POPUP CLOSE-------------------------------------------------
 function closePopup(popup) {
  popup.classList.remove('popup_opened');
 }
-
+//--------------------------------------TEXT CONTENT POPUP EDIT-------------------------------------
 function input() {
   openPopup(popupWindow);
   nameInput.value = profileName.textContent;
   jobInput.value = profileProfession.textContent;
 }
-
+//--------------------------------------ADD CONTENT IN PROFILE FROM POPUP-EDIT INPUT--------------------------
 function formSubmitHandler (evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profileProfession.textContent = jobInput.value;
   closePopup(popupWindow);
 }
-
-//  добавление карточек при загрузке и добавление новой карточки через форму попап_______________________
-
-function createCard(element) {//ф создания готовой карточки
+//--------------------------------------CREATE CARD FOR NEXT INSERT---------------------------------
+function createCard(element) {
   const cardElement = cardTemplate.cloneNode(true);
   cardElement.querySelector('.photo-grid__card-image').src = element.link;
   cardElement.querySelector('.photo-grid__card-image').alt = element.name;
   cardElement.querySelector('.photo-grid__card-title').textContent = element.name;
-  
+//--------------------------------------listeners for different events------------------------------
   cardElement.querySelector('.photo-grid__card-like').addEventListener('click', (event) => {
-    event.target.classList.toggle("photo-grid__card-like_active")});//лайк
+    event.target.classList.toggle("photo-grid__card-like_active")});
   cardElement.querySelector('.photo-grid__delete').addEventListener('click', (event) => {
-    event.target.closest('.photo-grid__card').remove()});//корзина
+    event.target.closest('.photo-grid__card').remove()});
     cardElement.querySelector('.photo-grid__card-image').addEventListener('click', fullscreenImage)
   return cardElement;
 }
-
-
+//--------------------------------------ADDING CARDS------------------------------------------------
 function renderCard(element) {
    const newCard = createCard(element)
-
    cardList.append(newCard);
 }
-
 cardsInitial.forEach(renderCard);
-
+//--------------------------------------ADD NEW CARD IN CARD-LIST FROM POPUP-ADD INPUT---------------
  function formAddHandler(evt) {
    evt.preventDefault();
-   const cardImage = imgInput.value;
-   const cardTitle = placeInput.value;
    const link = imgInput.value;
    const name = placeInput.value;
    renderCard({name, link})
    closePopup(popupAddWindow);
 }
-
+//--------------------------------------FULLSCREEN FORMAT WITH CONTENT--------------------------------
 function fullscreenImage(evt) {
   openPopup(popupFullscreen);
-  captionPopup.innerText = evt.path[1].querySelector('.photo-grid__card-title').innerText; //эту
+  captionPopup.innerText = evt.path[1].querySelector('.photo-grid__card-title').innerText;
   imageFullscreen.src = evt.target.src;
   imageFullscreen.alt = evt.target.alt;
   }
-
+//--------------------------------------ALL OTHER BUTTONS LISTENERS------------------------------------
 buttonEdit.addEventListener('click', input);
 formElement.addEventListener('submit', formSubmitHandler);
 formAddElement.addEventListener('submit', formAddHandler);
 popupEditClose.addEventListener('click', function(){
-  closePopup(popupWindow)
-  });
+  closePopup(popupWindow)});
 popupAddClose.addEventListener('click', function(){
-  closePopup(popupAddWindow)
-  });
+  closePopup(popupAddWindow)});
 buttonAdd.addEventListener('click', function(){
-  openPopup(popupAddWindow)
-  });
+  openPopup(popupAddWindow)});
 imageClose.addEventListener('click', function(){
-  closePopup(popupFullscreen)
-  });
+  closePopup(popupFullscreen)});
+
+//--------------------------------------URL FOR FAST TEST------------------------------------
 
 // https://images.unsplash.com/photo-1643475246169-dd57253b646a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2960&q=80
-// ссылка тестик
+
