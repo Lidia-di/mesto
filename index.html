@@ -37,10 +37,18 @@
       <button class="popup__close-icon popup__close-icon_type_profile-edit" type="button"></button>
       <div class="popup__container popup__container_type_profile-edit">
         <h3 class="popup__title popup__title_type_profile-edit">Редактировать профиль</h3>
-        <form class="popup__field popup__field_type_profile-edit" name="field">
-          <input type="text" name="fullname" placeholder="Ваше имя" class="popup__input popup__input_type_name" required minlength="2" maxlength="40">
-          <input type="text" name="profession" placeholder="Ваша профессия" class="popup__input popup__input_type_profession" required minlength="2" maxlength="200">
-        <button class="popup__save-button" type="submit">Сохранить</button>
+        <form class="popup__form popup__form_type_profile-edit" name="field" novalidate>
+          <fieldset class="popup__set">
+            <label class="popup__field">
+              <input class="popup__input popup__input_type_name" id="name-input" placeholder="Ваше имя" type="text" name="fullname" required minlength="2" maxlength="40">
+              <span class="popup__input_type_error name-input-error"></span>
+            </label>
+            <label class="popup__field">
+              <input class="popup__input popup__input_type_profession" id="profession-input" placeholder="Ваша профессия" type="text" name="profession" required minlength="2" maxlength="200">
+              <span class="popup__input_type_error profession-input-error"> </span>
+            </label>
+            <button class="popup__button popup__button_type_edit" type="submit">Сохранить</button>
+          </fieldset>
         </form>
       </div>
     </section>
@@ -49,10 +57,18 @@
       <button class="popup__close-icon popup__close-icon_type_add" type="button"></button>
       <div class="popup__container popup__container_type_add">
         <h3 class="popup__title popup__title_type_add">Новое место</h3>
-        <form class="popup__field popup__field_type_add" name="field">
-          <input type="text" name="place" placeholder="Название" class="popup__input popup__input_type_place" required minlength="2" maxlength="30">
-          <input type="url" name="link" placeholder="Ссылка на картинку" class="popup__input popup__input_type_url" required>
-        <button class="popup__save-button popup__save-button_type_add" type="submit">Сохранить</button>
+        <form class="popup__form popup__form_type_add" name="field" novalidate>
+          <fieldset class="popup__set">
+            <label class="popup__field">
+              <input class="popup__input popup__input_type_place" id="place-input" placeholder="Название" type="text" name="place" required minlength="2" maxlength="30">
+              <span class="popup__input_type_error place-input-error"></span>
+            </label>
+            <label class="popup__field">
+              <input class="popup__input popup__input_type_url" id="url-input" placeholder="Ссылка на картинку" type="url" name="link" required>
+              <span class="popup__input_type_error url-input-error"></span>
+            </label>
+            <button class="popup__button popup__button_type_add" type="submit">Сохранить</button>
+          </fieldset>
         </form>
       </div>  
     </section>
