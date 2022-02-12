@@ -40,7 +40,6 @@ function closePopup (popup) {
 }
 function keyHandler (evt) {  // не работает ;((((
   if (evt.keyCode === 27) {
-    const openedPopup = document.querySelector('.popup_opened');
     closePopup(popup);
   }
  }
