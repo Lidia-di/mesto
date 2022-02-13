@@ -1,0 +1,27 @@
+.popup__input-error_active {
+  margin: 0px;
+  padding: 0px;
+  min-height: 30px;
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  color: #FF0000;
+  border-top: 1px solid #FF0000;
+  border-bottom: none;
+  text-decoration: none;
+}
+@media screen and (max-width: 665px) {
+  .popup__input-error_active {
+    margin: 0px calc(282px - 238px);
+    width: 238px;
+
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .popup__input-error_active {
+    margin: 0px auto;
+    width: 238px;
+  }
+}
