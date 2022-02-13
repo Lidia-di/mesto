@@ -38,18 +38,21 @@ function openPopup (popup) {
 function closePopup (popup) {
  popup.classList.remove('popup_opened');
 }
-function keyHandler (evt) {  // не работает ;((((
-  if (evt.keyCode === 27) {
-    closePopup(popup);
+
+document.addEventListener('keydown', (evt) => {
+  if (evt.key === 'Escape') {
+    const popupOpened = document.querySelector('.popup_opened');
+    closePopup(popupOpened);
   }
- }
-function clickHandler (evt) {
-  if (evt.target.closest('.popup__container') === null) {  // не работает ;((((
-    closePopup(popup);
+ });
+
+ window.addEventListener('click', (evt) => {
+    if (evt.target.classList.contains('popup_opened')) {
+    const popupOpened = document.querySelector('.popup_opened');
+    closePopup(popupOpened);
+    evt.stopPropagation();
   }
-  evt.stopPropagation();
-  }
- 
+ });
 //--------------------------------------TEXT CONTENT POPUP EDIT-------------------------------------
 function input() {
   openPopup(popupEdit);
@@ -103,13 +106,10 @@ buttonEdit.addEventListener('click', input);
 formElementEdit.addEventListener('submit', formSubmitHandler);
 formElementAdd.addEventListener('submit', formAddHandler);
 popupEditClose.addEventListener('click', function(){closePopup(popupEdit)});
-popupEdit.addEventListener('keydown', function(){keyHandler(evt)});  // не работает ;((((
-popup.addEventListener('click', function(){clickHandler});  // не работает ;((((
 popupAddClose.addEventListener('click', function(){closePopup(popupAdd)});
 popupAddClose.addEventListener('keydown', function(){keyHandler(popupAdd)});
 buttonAdd.addEventListener('click', function(){openPopup(popupAdd)});
 imageClose.addEventListener('click', function(){closePopup(popupFullscreen)});
-
 //--------------------------------------URL FOR FAST TEST------------------------------------
 
 // https://images.unsplash.com/photo-1643475246169-dd57253b646a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2960&q=80
