@@ -29,6 +29,7 @@ const imageClose = document.querySelector('.popup__close-icon_type_fullscreen');
 
 const popup = document.querySelector('.popup');
 const popupContainer = document.querySelector('.popup__container');
+const inputElement = document.querySelector('.popup__input');
 
 //--------------------------------------POPUP OPEN-------------------------------------------------
 function openPopup (popup) {
