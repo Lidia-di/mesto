@@ -30,17 +30,17 @@ const imageClose = document.querySelector('.popup__close-icon_type_fullscreen');
 const popupContainer = document.querySelector('.popup__container');
 const inputElement = document.querySelector('.popup__input');
 
-const popup = document.querySelectorAll('.popup');
+const popups = document.querySelectorAll('.popup');
  
 //--------------------------------------POPUP OPEN-------------------------------------------------
-function openPopup (popup) {
- popup.classList.add('popup_opened');
+function openPopup (popups) {
+ popups.classList.add('popup_opened');
  document.addEventListener('keydown', closeByEscape); 
 }
 //--------------------------------------POPUP CLOSE-------------------------------------------------
 
-function closePopup(popup) {
-  popup.classList.remove('popup_opened');
+function closePopup(popups) {
+  popups.classList.remove('popup_opened');
   document.removeEventListener('keydown', closeByEscape); 
 }
 
@@ -57,7 +57,7 @@ function closeByEscape(evt) {
     evt.stopPropagation();
   }
 }
-popup.forEach((el)=>{el.addEventListener('click', closeByOverlay)});
+popups.forEach((el)=>{el.addEventListener('click', closeByOverlay)});
 //--------------------------------------TEXT CONTENT POPUP EDIT-------------------------------------
 function openProfilePopup() {
   openPopup(popupEdit);
